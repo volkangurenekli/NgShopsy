@@ -1,0 +1,6 @@
+<p>Select Campaign</p>
+<div *ngFor="let item of campaignTypes$ | async">
+  <h3>{{ item.name }}</h3>
+  <img [src]="item.img" style="width: 200px" />
+  <a [routerLink]="['/campaign/create', item.type]">Continue</a>
+</div>
